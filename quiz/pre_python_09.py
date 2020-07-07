@@ -15,3 +15,18 @@ score : 88
 A
 
 """
+
+score = int(input("score :: "))
+
+if score <= 100 and score > 80 : print("A")
+elif score > 60 : print("B")
+elif score > 40 : print("C")
+elif score > 20 : print("D")
+elif score >= 0 : print("F")
+else : print("점수는 0부터 100까지 값을 가집니다.")
+
+
+
+
+
+

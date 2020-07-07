@@ -9,3 +9,12 @@ print(Triangle(10,20))
 100
 
 """
+
+def Triangle(width, height) :
+    s = width*height/2
+    return int(s)
+
+
+
+print(Triangle(int(input("가로 :: ")), int(input("세로 :: "))))
+
