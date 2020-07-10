@@ -13,3 +13,16 @@
 """
 
 import random
+
+num1 = input("첫번째 참가자 엔터키를 눌러 주사위를 던져 주세요 : 1~6 랜덤숫자 출력")
+num1 = random.randrange(1,6)
+num2 = input("두번째 참가자 엔터키를 눌러 주사위를 던져 주세요 : 1~6 랜덤숫자 출력")
+num2 = random.randrange(1,6)
+
+# print("첫번째 참가자 : %d   두번째 참가자 : %d" %(num1,num2))
+if num1 > num2 :
+    print("첫 번째 참가자의 승리입니다.")
+elif num1 == num2 :
+    print("비겼습니다.")
+else :
+    print("두 번째 참가자의 승리입니다.")
