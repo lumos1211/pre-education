@@ -19,3 +19,20 @@ HELLO
 입력 형식이 잘못되었습니다.
 
 """
+
+
+enter = input("<입력> ")
+
+
+if enter.islower() == True:
+    print(enter.upper())
+elif enter.isupper == True:
+    print(enter.lower())
+else :
+    print("입력형식이 잘못되었습니다.")
+
+## 영어와 한글이 섞인 경우는 어떻게 해결하나? 정규식?
+
+
+
+

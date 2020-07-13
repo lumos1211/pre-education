@@ -10,3 +10,13 @@ print(factorial(5))
 120
   """
 
+def factorial(num):
+      if num == 0 or num == 1 :
+            return 1
+      elif num <0:
+            print("factorial은 음수 입력이 불가능합니다")
+      else:
+            return num * factorial(num-1)
+
+
+print(factorial(5))

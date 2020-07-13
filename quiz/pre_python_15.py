@@ -8,3 +8,14 @@
 <출력>
 남자
 """
+
+num = input("주민등록번호 :: ")
+code=num.split('-')
+
+if code[1][0] == '1' or code[1][0] == '3' :
+    print("남자")
+elif code[1][0] == '2' or code[1][0] == '4':
+    print("여자")
+else :
+    print("wrong")
+
