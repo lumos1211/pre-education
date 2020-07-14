@@ -15,8 +15,49 @@ print(greedy())
 <출력>
 액수입력 :  1050
 동전의 종류 :  100 50 10
-100원 동전 10개, 50원 동전 1개, 10원 동전 0개
+100원 동전 10개, 50원 동전 1개, 10원 동전 0개 
 '''
+
+
+def greedy():
+
+    money = int(input("액수 입력 :: "))
+    coin = input("동전의 종류 :: ")
+
+        # 입력받은 coin의 종류를 list화 & 내림차순 정렬
+    coin_list = coin.split(' ')
+    for i in range(len(coin_list)):
+        coin_list[i] = int(coin_list[i])
+    coin_list.sort(reverse = True)
+
+        # result를 dictionary 형으로 만듬
+    result = {x: 0 for x in coin_list}
+    
+    value = money
+    for coin in coin_list:
+        result[coin] = value // coin
+        value = value % coin
+        # print(result)
+        if value == 0 :
+            break
+
+         ## 잔돈이 남는 경우
+            ## 개 to 원 ??
+    # if value != 0 :
+    #     result['나머지'] = value
+
+    # for key in result.keys():
+    #     print(f'{key}원 동전 {result[key]}개')
+        
+    return ", ".join(f'{key}원 동전 {result[key]}개' for key in result.keys())
+                
+
+    
+
+
+
+
+print(greedy())
 
 
 
