@@ -8,3 +8,14 @@ print(factorial(10))
 
 <출력>
 3628800'''
+
+
+def factorial(num):
+    if num==0 or num ==1 :
+        return 1
+    elif num < 0 :
+        return "음수는 입력 불가능합니다."
+    else :
+        return num*factorial(num-1)
+print(factorial(10))
+

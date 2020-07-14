@@ -10,3 +10,22 @@ print(bubble_sort(list))
 
 <출력>
 [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 16, 21]'''
+
+list=[4,3,2,1,8,7,5,10,11,16,21,6]
+
+def bubble_sort(list):
+    for j in range(len(list)):
+        num = 0 ##?? 더 효율적인 방법?
+        for i in range(len(list)-1):
+            if list[i] > list[i+1]:
+                temp = list[i]
+                list[i]= list[i+1]
+                list[i+1]= temp
+                num +=1
+        if num == 0:
+            break
+        print(list)
+    return list
+
+print(bubble_sort(list))
+

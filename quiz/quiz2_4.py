@@ -23,3 +23,8 @@ multi_card.print()
 교통에서 1800.0원을 사용했습니다.
 잔액이 5700.0원 입니다
 '''
+
+class Multi_card():
+    
+
+
