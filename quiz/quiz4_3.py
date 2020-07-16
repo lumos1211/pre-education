@@ -30,3 +30,19 @@
 [1, 3, 4, 9, 12]  
 
 """
+
+
+def insertion_sort(list):
+    re_list = [list[0]]
+    length = len(list)
+
+    for i in range(1, length):
+        key = list[i]
+        point = i-1
+
+
+    return re_list
+
+list = [9, 4, 3, 1, 12]
+# list = [9, 4, 3, 1, 12, 2, 8, 5, 10]
+print(insertion_sort(list))

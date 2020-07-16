@@ -34,3 +34,25 @@ list = [1,3,4,5,7]
 list = [1,3,4,5,7]
 
 '''
+
+def bubble_sort(list):
+    length = len(list)
+
+    for j in range(length):
+        stop = 0
+        for i in range(length-j-1):
+            if list[i] > list[i+1]:
+                temp = list[i]
+                list[i] = list[i+1]
+                list[i+1] = temp
+                stop += 1
+        # 교환이 이루어지지 않으면 반복문 break
+        if stop ==0:
+            break
+
+    return list
+
+list = [9, 4, 3, 1, 12]
+# list = [9, 4, 3, 1, 12, 2, 8, 5, 10]
+
+print(bubble_sort(list))

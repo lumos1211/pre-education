@@ -51,3 +51,33 @@
 [1, 3, 4, 9, 12]
 
 """
+  # 0번과 1~n까지 비교 후 최소값 0번 자리에 넣기
+  # 1번과 2~n까지 비교 후 최소값 1번 자리에 넣기
+  # ...
+  # n-1번과 n-1~n까지 비교 후 최소값 n-1번 자리에 넣기
+
+  # if n-1 전에 교환이 끝나면 stop?
+
+def selection_sort(list):
+      
+    length = len(list)
+
+    for i in range(length-1):
+        stop = 0
+
+        for j in range(i,length):
+            if list[i] > list[j]:
+                temp = list[i]
+                list[i] = list[j]
+                list[j] = temp
+                stop += 1
+
+        if stop == 0:
+              break
+
+    return list
+
+
+list = [9, 4, 3, 1, 12]
+# list = [9, 4, 3, 1, 12, 2, 8, 5, 10]
+print(selection_sort(list))
